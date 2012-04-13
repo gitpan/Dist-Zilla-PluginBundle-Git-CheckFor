@@ -3,7 +3,9 @@ NAME
     once
 
 VERSION
-    version 0.001
+    This document describes version 0.002 of
+    Dist::Zilla::PluginBundle::Git::CheckFor - released April 13, 2012 as
+    part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 SYNOPSIS
         ; in dist.ini

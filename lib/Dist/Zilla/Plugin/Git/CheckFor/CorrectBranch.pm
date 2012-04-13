@@ -9,7 +9,7 @@
 #
 package Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch;
 {
-  $Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch::VERSION = '0.001';
+  $Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch::VERSION = '0.002';
 }
 
 # ABSTRACT: Check that you're on the correct branch before release
@@ -69,7 +69,7 @@ Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch - Check that you're on the cor
 
 =head1 VERSION
 
-version 0.001
+This document describes version 0.002 of Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch - released April 13, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 
@@ -89,7 +89,7 @@ version 0.001
 This is a simple L<Dist::Zilla> plugin to check that you are on the correct
 branch before allowing a release...  Its reason for existance is to prevent
 accidental releases being cut from topic branches: which are in general not
-unrecoverable, but annoying, messy, and (sometimes) embarassing.
+unrecoverable, but annoying, messy, and (sometimes) embarrassing.
 
 =for Pod::Coverage current_branch before_release
 

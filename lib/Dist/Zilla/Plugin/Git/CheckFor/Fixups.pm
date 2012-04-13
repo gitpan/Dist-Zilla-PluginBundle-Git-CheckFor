@@ -9,7 +9,7 @@
 #
 package Dist::Zilla::Plugin::Git::CheckFor::Fixups;
 {
-  $Dist::Zilla::Plugin::Git::CheckFor::Fixups::VERSION = '0.001';
+  $Dist::Zilla::Plugin::Git::CheckFor::Fixups::VERSION = '0.002';
 }
 
 # ABSTRACT: Check your repo for fixup! and squash! before release
@@ -105,7 +105,7 @@ Dist::Zilla::Plugin::Git::CheckFor::Fixups - Check your repo for fixup! and squa
 
 =head1 VERSION
 
-version 0.001
+This document describes version 0.002 of Dist::Zilla::Plugin::Git::CheckFor::Fixups - released April 13, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 
@@ -116,12 +116,12 @@ version 0.001
 =head1 DESCRIPTION
 
 This is a simple L<Dist::Zilla> plugin to check that since the last release,
-you have no fixup or squash commits remaining in your history.  The presense
+you have no fixup or squash commits remaining in your history.  The presence
 of these commits is almost certainly an oversight, so if any are found the
 release is aborted.
 
-Note that we do not check for the presense of such commits in the history of
-older releases; having a fixup commit in the history is embarassing, but not
+Note that we do not check for the presence of such commits in the history of
+older releases; having a fixup commit in the history is embarrassing, but not
 so much so as rebasing to resolve a blemish in the deep, dark, sordid past of
 the project.
 

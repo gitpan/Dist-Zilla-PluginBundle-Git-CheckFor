@@ -9,7 +9,7 @@
 #
 package Dist::Zilla::Role::Git::Repo::More;
 {
-  $Dist::Zilla::Role::Git::Repo::More::VERSION = '0.001';
+  $Dist::Zilla::Role::Git::Repo::More::VERSION = '0.002';
 }
 
 # ABSTRACT: Check your repo for fixup! and squash! before release
@@ -42,7 +42,7 @@ Dist::Zilla::Role::Git::Repo::More - Check your repo for fixup! and squash! befo
 
 =head1 VERSION
 
-version 0.001
+This document describes version 0.002 of Dist::Zilla::Role::Git::Repo::More - released April 13, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 

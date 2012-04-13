@@ -19,7 +19,7 @@ my %WriteMakefileArgs = (
     "Path::Class" => 0,
     "Test::DZil" => 0,
     "Test::Fatal" => 0,
-    "Test::Moose::More" => "0.004",
+    "Test::Moose::More" => "0.008",
     "Test::More" => "0.88",
     "Test::TempDir" => 0,
     "autodie" => 0,
@@ -45,7 +45,7 @@ my %WriteMakefileArgs = (
     "MooseX::AttributeShortcuts" => 0,
     "namespace::autoclean" => 0
   },
-  "VERSION" => "0.001",
+  "VERSION" => "0.002",
   "test" => {
     "TESTS" => "t/*.t t/plugin/*.t"
   }

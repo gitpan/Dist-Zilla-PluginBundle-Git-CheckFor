@@ -9,7 +9,7 @@
 #
 package Dist::Zilla::PluginBundle::Git::CheckFor;
 {
-  $Dist::Zilla::PluginBundle::Git::CheckFor::VERSION = '0.001';
+  $Dist::Zilla::PluginBundle::Git::CheckFor::VERSION = '0.002';
 }
 
 # ABSTRACT: All Git::CheckFor plugins at once
@@ -48,7 +48,7 @@ Dist::Zilla::PluginBundle::Git::CheckFor - All Git::CheckFor plugins at once
 
 =head1 VERSION
 
-version 0.001
+This document describes version 0.002 of Dist::Zilla::PluginBundle::Git::CheckFor - released April 13, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 
@@ -62,6 +62,8 @@ repository; namely: you're on the right branch and you haven't forgotten any
 autosquash commits (C<fixup!> or C<squash!>).
 
 =for Pod::Coverage configure
+
+=for :spelling autosquash
 
 =head1 SEE ALSO
 
