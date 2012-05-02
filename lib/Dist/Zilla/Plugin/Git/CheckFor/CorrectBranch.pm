@@ -9,7 +9,7 @@
 #
 package Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch;
 {
-  $Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch::VERSION = '0.002';
+  $Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch::VERSION = '0.003';
 }
 
 # ABSTRACT: Check that you're on the correct branch before release
@@ -69,7 +69,7 @@ Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch - Check that you're on the cor
 
 =head1 VERSION
 
-This document describes version 0.002 of Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch - released April 13, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.003 of Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch - released May 02, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 

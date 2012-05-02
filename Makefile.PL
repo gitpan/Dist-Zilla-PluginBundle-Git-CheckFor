@@ -15,14 +15,12 @@ my %WriteMakefileArgs = (
     "File::Find" => 0,
     "File::Temp" => 0,
     "File::chdir" => 0,
-    "IPC::System::Simple" => 0,
     "Path::Class" => 0,
     "Test::DZil" => 0,
     "Test::Fatal" => 0,
     "Test::Moose::More" => "0.008",
     "Test::More" => "0.88",
     "Test::TempDir" => 0,
-    "autodie" => 0,
     "strict" => 0,
     "warnings" => 0
   },
@@ -39,13 +37,16 @@ my %WriteMakefileArgs = (
     "Dist::Zilla::Role::Git::Repo" => 0,
     "Dist::Zilla::Role::PluginBundle::Easy" => 0,
     "Git::Wrapper" => 0,
+    "IPC::System::Simple" => 0,
     "List::Util" => 0,
     "Moose" => 0,
     "Moose::Role" => 0,
     "MooseX::AttributeShortcuts" => 0,
+    "Try::Tiny" => 0,
+    "autodie" => 0,
     "namespace::autoclean" => 0
   },
-  "VERSION" => "0.002",
+  "VERSION" => "0.003",
   "test" => {
     "TESTS" => "t/*.t t/plugin/*.t"
   }

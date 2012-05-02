@@ -68,6 +68,7 @@ eval { $v .= pmver('Test::Fatal','any version') };
 eval { $v .= pmver('Test::Moose::More','0.008') };
 eval { $v .= pmver('Test::More','0.88') };
 eval { $v .= pmver('Test::TempDir','any version') };
+eval { $v .= pmver('Try::Tiny','any version') };
 eval { $v .= pmver('autodie','any version') };
 eval { $v .= pmver('namespace::autoclean','any version') };
 eval { $v .= pmver('strict','any version') };

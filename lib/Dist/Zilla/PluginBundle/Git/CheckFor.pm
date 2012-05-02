@@ -9,7 +9,7 @@
 #
 package Dist::Zilla::PluginBundle::Git::CheckFor;
 {
-  $Dist::Zilla::PluginBundle::Git::CheckFor::VERSION = '0.002';
+  $Dist::Zilla::PluginBundle::Git::CheckFor::VERSION = '0.003';
 }
 
 # ABSTRACT: All Git::CheckFor plugins at once
@@ -48,7 +48,7 @@ Dist::Zilla::PluginBundle::Git::CheckFor - All Git::CheckFor plugins at once
 
 =head1 VERSION
 
-This document describes version 0.002 of Dist::Zilla::PluginBundle::Git::CheckFor - released April 13, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.003 of Dist::Zilla::PluginBundle::Git::CheckFor - released May 02, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 

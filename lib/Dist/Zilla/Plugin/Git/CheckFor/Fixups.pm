@@ -9,7 +9,7 @@
 #
 package Dist::Zilla::Plugin::Git::CheckFor::Fixups;
 {
-  $Dist::Zilla::Plugin::Git::CheckFor::Fixups::VERSION = '0.002';
+  $Dist::Zilla::Plugin::Git::CheckFor::Fixups::VERSION = '0.003';
 }
 
 # ABSTRACT: Check your repo for fixup! and squash! before release
@@ -18,10 +18,14 @@ use Moose;
 use namespace::autoclean;
 use MooseX::AttributeShortcuts;
 
+use autodie 'system';
+use IPC::System::Simple ();
+
 # we depend on functionality first present in 1.120370
 use Dist::Zilla::Plugin::Git::NextVersion 1.120370 ();
 use List::Util 'first';
 use Git::Wrapper;
+use Try::Tiny;
 
 # debugging...
 #use Smart::Comments;
@@ -54,12 +58,26 @@ sub before_release {
     my $last_ver = $self->last_version;
 
     ### $last_ver
+
     my $log_opts = { pretty => 'oneline', 'abbrev-commit' => 1 };
-    my @logs
-        = defined $last_ver
-        ? $self->_repo->log($log_opts, "$last_ver..HEAD")
-        : $self->_repo->log($log_opts)
+    my @logs;
+    if (defined $last_ver) {
+
+        # FIXME this should be corrected to work in a cleaner fashion,
+        # possibly by mucking around with version_regexp and the tags in here,
+        # or by splitting the common git stuff out into a stash and accessing
+        # that, etc, etc
+        #
+        # But for now, this allows tags generated with a '-TRIAL' appended to
+        # them to be found and used without too much fuss.
+
+        try   { @logs = $self->_repo->log($log_opts, "$last_ver..HEAD") }
+        catch { @logs = $self->_repo->log($log_opts, "$last_ver-TRIAL..HEAD") }
         ;
+    }
+    else {
+        @logs = $self->_repo->log($log_opts);
+    }
 
     my $_checker = sub {
         my $lookfor = shift;
@@ -105,7 +123,7 @@ Dist::Zilla::Plugin::Git::CheckFor::Fixups - Check your repo for fixup! and squa
 
 =head1 VERSION
 
-This document describes version 0.002 of Dist::Zilla::Plugin::Git::CheckFor::Fixups - released April 13, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.003 of Dist::Zilla::Plugin::Git::CheckFor::Fixups - released May 02, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 
