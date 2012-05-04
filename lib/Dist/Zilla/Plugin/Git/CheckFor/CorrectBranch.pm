@@ -9,7 +9,7 @@
 #
 package Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch;
 {
-  $Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch::VERSION = '0.003';
+  $Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch::VERSION = '0.004';
 }
 
 # ABSTRACT: Check that you're on the correct branch before release
@@ -24,7 +24,14 @@ with
     'Dist::Zilla::Role::Git::Repo::More',
     ;
 
-has release_branch => (is => 'ro', isa => 'Str', default => 'master');
+sub mvp_multivalue_args { qw(release_branch) }
+
+has release_branch => (
+    isa => 'ArrayRef[Str]',
+    traits => ['Array'],
+    handles => { release_branch => 'elements' },
+    default => sub { [ 'master' ] },
+);
 
 sub current_branch {
     my $self = shift @_;
@@ -37,19 +44,19 @@ sub before_release {
     my $self = shift @_;
 
     my $cbranch = $self->current_branch;
-    my $rbranch = $self->release_branch;
+    my @rbranch = $self->release_branch;
 
     my $fatal_msg
         = !$cbranch                 ? 'Cannot determine current branch!'
         : $cbranch eq '(no branch)' ? 'You do not appear to be on any branch.  This is almost certainly an error.'
-        : $cbranch ne $rbranch      ? "Your current branch ($cbranch) is not the release branch ($rbranch)"
+        : (!grep { $cbranch eq $_ } @rbranch) ? "Your current branch ($cbranch) is not the release branch (". join(', ', @rbranch). ")"
         :                             undef
         ;
 
     $self->log_fatal($fatal_msg) if $fatal_msg;
 
     # if we're here, we're good
-    $self->log("Current branch ($cbranch) and release branch match ($rbranch)");
+    $self->log("Current branch ($cbranch) and release branch match (", join(', ', @rbranch), ")");
     return;
 }
 
@@ -69,19 +76,23 @@ Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch - Check that you're on the cor
 
 =head1 VERSION
 
-This document describes version 0.003 of Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch - released May 02, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.004 of Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch - released May 04, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 
     ; in dist.ini
     [Git::CheckFor::CorrectBranch]
     ; release_branch defaults to 'master'
-    ;release_branch = master
+    release_branch = master
+    release_branch = stable
 
     # on branch topic/geewhiz...
     $ dzil release # ABENDs!
 
     # ...and on branch master
+    $ dzil release # succeeds
+
+    # ...and on branch stable
     $ dzil release # succeeds
 
 =head1 DESCRIPTION
@@ -91,14 +102,15 @@ branch before allowing a release...  Its reason for existance is to prevent
 accidental releases being cut from topic branches: which are in general not
 unrecoverable, but annoying, messy, and (sometimes) embarrassing.
 
-=for Pod::Coverage current_branch before_release
+=for Pod::Coverage current_branch before_release mvp_multivalue_args
 
 =head1 OPTIONS
 
 =head2 release_branch
 
 This is the name of the branch it is legal to release from: it defaults to
-'master'.
+'master'. Multiple branches may be specified; you may want to allow 'master'
+and 'stable'.
 
 =head1 SEE ALSO
 

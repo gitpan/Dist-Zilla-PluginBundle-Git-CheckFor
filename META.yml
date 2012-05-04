@@ -42,7 +42,7 @@ resources:
   bugtracker: https://github.com/RsrchBoy/dist-zilla-pluginbundle-git-checkfor/issues
   homepage: http://metacpan.org/release/Dist-Zilla-PluginBundle-Git-CheckFor/
   repository: git://github.com/RsrchBoy/dist-zilla-pluginbundle-git-checkfor.git
-version: 0.003
+version: 0.004
 x_Dist_Zilla:
   plugins:
     -
@@ -72,11 +72,11 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch
       name: '@Filter/@Git::CheckFor/Git::CheckFor::CorrectBranch'
-      version: 0.002_02
+      version: 0.003
     -
       class: Dist::Zilla::Plugin::Git::CheckFor::Fixups
       name: '@Filter/@Git::CheckFor/Git::CheckFor::Fixups'
-      version: 0.002_02
+      version: 0.003
     -
       class: Dist::Zilla::Plugin::GatherDir
       name: '@Filter/GatherDir'
@@ -204,11 +204,11 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::GitHub::Meta
       name: '@Filter/GitHub::Meta'
-      version: 0.18
+      version: 0.19
     -
       class: Dist::Zilla::Plugin::GitHub::Update
       name: '@Filter/GitHub::Update'
-      version: 0.18
+      version: 0.19
     -
       class: Dist::Zilla::Plugin::PodWeaver
       name: '@Filter/PodWeaver'

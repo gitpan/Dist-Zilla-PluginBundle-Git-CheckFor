@@ -9,7 +9,7 @@
 #
 package Dist::Zilla::Plugin::Git::CheckFor::Fixups;
 {
-  $Dist::Zilla::Plugin::Git::CheckFor::Fixups::VERSION = '0.003';
+  $Dist::Zilla::Plugin::Git::CheckFor::Fixups::VERSION = '0.004';
 }
 
 # ABSTRACT: Check your repo for fixup! and squash! before release
@@ -123,7 +123,7 @@ Dist::Zilla::Plugin::Git::CheckFor::Fixups - Check your repo for fixup! and squa
 
 =head1 VERSION
 
-This document describes version 0.003 of Dist::Zilla::Plugin::Git::CheckFor::Fixups - released May 02, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.004 of Dist::Zilla::Plugin::Git::CheckFor::Fixups - released May 04, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 
