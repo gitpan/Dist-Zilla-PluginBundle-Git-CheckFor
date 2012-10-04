@@ -9,7 +9,7 @@
 #
 package Dist::Zilla::Plugin::Git::CheckFor::Fixups;
 {
-  $Dist::Zilla::Plugin::Git::CheckFor::Fixups::VERSION = '0.004';
+  $Dist::Zilla::Plugin::Git::CheckFor::Fixups::VERSION = '0.005';
 }
 
 # ABSTRACT: Check your repo for fixup! and squash! before release
@@ -33,13 +33,13 @@ use Try::Tiny;
 with
     'Dist::Zilla::Role::BeforeRelease',
     'Dist::Zilla::Role::Git::Repo::More',
+        #-excludes => [ qw { _build_version_regexp _build_first_version } ],
     ;
 
 has _next_version_plugin => (
-
     is      => 'lazy',
     isa     => 'Dist::Zilla::Plugin::Git::NextVersion',
-    handles => [ 'last_version' ],
+    handles => [ qw{ version_regexp first_version } ],
 );
 
 sub _build__next_version_plugin {
@@ -111,11 +111,13 @@ __PACKAGE__->meta->make_immutable;
 
 !!42;
 
-
+__END__
 
 =pod
 
 =encoding utf-8
+
+=for :stopwords Chris Weyl
 
 =head1 NAME
 
@@ -123,7 +125,7 @@ Dist::Zilla::Plugin::Git::CheckFor::Fixups - Check your repo for fixup! and squa
 
 =head1 VERSION
 
-This document describes version 0.004 of Dist::Zilla::Plugin::Git::CheckFor::Fixups - released May 04, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.005 of Dist::Zilla::Plugin::Git::CheckFor::Fixups - released October 03, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 
@@ -201,8 +203,3 @@ This is free software, licensed under:
   The GNU Lesser General Public License, Version 2.1, February 1999
 
 =cut
-
-
-__END__
-
-

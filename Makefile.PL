@@ -12,6 +12,7 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "All Git::CheckFor plugins at once",
   "AUTHOR" => "Chris Weyl <cweyl\@alumni.drew.edu>",
   "BUILD_REQUIRES" => {
+    "Capture::Tiny" => 0,
     "File::Find" => 0,
     "File::Temp" => 0,
     "File::chdir" => 0,
@@ -46,7 +47,7 @@ my %WriteMakefileArgs = (
     "autodie" => 0,
     "namespace::autoclean" => 0
   },
-  "VERSION" => "0.004",
+  "VERSION" => "0.005",
   "test" => {
     "TESTS" => "t/*.t t/plugin/*.t"
   }

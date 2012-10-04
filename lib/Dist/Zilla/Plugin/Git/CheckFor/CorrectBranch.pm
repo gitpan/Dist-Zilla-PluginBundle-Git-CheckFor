@@ -9,7 +9,7 @@
 #
 package Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch;
 {
-  $Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch::VERSION = '0.004';
+  $Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch::VERSION = '0.005';
 }
 
 # ABSTRACT: Check that you're on the correct branch before release
@@ -64,11 +64,13 @@ __PACKAGE__->meta->make_immutable;
 
 !!42;
 
-
+__END__
 
 =pod
 
 =encoding utf-8
+
+=for :stopwords Chris Weyl
 
 =head1 NAME
 
@@ -76,7 +78,7 @@ Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch - Check that you're on the cor
 
 =head1 VERSION
 
-This document describes version 0.004 of Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch - released May 04, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.005 of Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch - released October 03, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 
@@ -159,8 +161,3 @@ This is free software, licensed under:
   The GNU Lesser General Public License, Version 2.1, February 1999
 
 =cut
-
-
-__END__
-
-

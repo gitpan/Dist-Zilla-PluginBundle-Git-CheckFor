@@ -9,7 +9,7 @@
 #
 package Dist::Zilla::PluginBundle::Git::CheckFor;
 {
-  $Dist::Zilla::PluginBundle::Git::CheckFor::VERSION = '0.004';
+  $Dist::Zilla::PluginBundle::Git::CheckFor::VERSION = '0.005';
 }
 
 # ABSTRACT: All Git::CheckFor plugins at once
@@ -36,11 +36,13 @@ __PACKAGE__->meta->make_immutable;
 
 !!42;
 
-
+__END__
 
 =pod
 
 =encoding utf-8
+
+=for :stopwords Chris Weyl
 
 =head1 NAME
 
@@ -48,7 +50,7 @@ Dist::Zilla::PluginBundle::Git::CheckFor - All Git::CheckFor plugins at once
 
 =head1 VERSION
 
-This document describes version 0.004 of Dist::Zilla::PluginBundle::Git::CheckFor - released May 04, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.005 of Dist::Zilla::PluginBundle::Git::CheckFor - released October 03, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 
@@ -112,7 +114,3 @@ This is free software, licensed under:
   The GNU Lesser General Public License, Version 2.1, February 1999
 
 =cut
-
-
-__END__
-
