@@ -14,21 +14,22 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 a300d989f4a0f01f096a9928ac47da8e5bb5541b Changes
+SHA1 bc51fe0fa5c08fb07717bdb433a0ab09b0904c52 Changes
 SHA1 2957e60aa16b6ba65d5f51d08ced44f201239e4d INSTALL
 SHA1 05207cbc5971035849c1de2c7cb3babaeaccb6fb LICENSE
-SHA1 72b29c5aa18119f0c02c0934b4ee15922c475f90 MANIFEST
-SHA1 48a0047715a42bac2a019b8161d2da7001f2f3b5 META.json
-SHA1 a20212560ca6e32ffe3e7d5b99f575010d0fce66 META.yml
-SHA1 0f63019eddaee87d2c4c5f619d59c9d62075c488 Makefile.PL
-SHA1 bc8318f89c26b0edf11b97a9e3f5d3ef825edbb1 README
-SHA1 0f17e57b112bd7c0d4ba2ff843d858800ca31b70 dist.ini
-SHA1 e7f168a48ca00294eecd7892e67f42b0fb2bc78d lib/Dist/Zilla/Plugin/Git/CheckFor/CorrectBranch.pm
-SHA1 2d1c2c15cc101bd1d6d9f1683a9766a6c95f21e6 lib/Dist/Zilla/Plugin/Git/CheckFor/Fixups.pm
-SHA1 d91d3dd8f8f5a73be7b126f8ece2741ecf861e6e lib/Dist/Zilla/PluginBundle/Git/CheckFor.pm
-SHA1 d6a9ec6c58648cac8f825b69f093c3dc397ff515 lib/Dist/Zilla/Role/Git/Repo/More.pm
+SHA1 fc468d9d1a127678843983af32c22903e4ac29c3 MANIFEST
+SHA1 b518a64d995c337b100574ab2f9548e29dfecf26 META.json
+SHA1 e35e250202881149147d1cd602de04fb14ae53f9 META.yml
+SHA1 1cfa6818612e18e84872130ff48ae5caffdd7349 Makefile.PL
+SHA1 4d4fd46e5d167809829dd63764cb06829bd0919d README
+SHA1 d3707a699cd26bd4f9beb5f919a98b70682b982f dist.ini
+SHA1 f8097d94613c8117cbf220865aa08dc66f85fec3 lib/Dist/Zilla/Plugin/Git/CheckFor/CorrectBranch.pm
+SHA1 53963f5b6a9e441ee93991b8b4bac351999e573c lib/Dist/Zilla/Plugin/Git/CheckFor/Fixups.pm
+SHA1 15913a4c47043c92845e69bf631511ff2f2c9cc9 lib/Dist/Zilla/Plugin/Git/CheckFor/MergeConflicts.pm
+SHA1 94f376c79b51f9e00c271873433624e568a90f31 lib/Dist/Zilla/PluginBundle/Git/CheckFor.pm
+SHA1 226d23fd8d3bd081d8067b0beee3245eaffdeb05 lib/Dist/Zilla/Role/Git/Repo/More.pm
 SHA1 cd5779ff8bc722ab813b62a2345c166642b770c6 t/00-compile.t
-SHA1 942e33a6286afb127680242c26d58b2086b18249 t/000-report-versions-tiny.t
+SHA1 5ee1da2489af2f79746b300e9105cb2e94efc9ff t/000-report-versions-tiny.t
 SHA1 53c48a29f4c990a157a7f885d74045aae0fe2cc7 t/funcs.pm
 SHA1 d6f0acf7c7e2e37c6389aba5b6afcda0832fdcf6 t/plugin/correct_branch.t
 SHA1 5ce4ec447e2ed1e1a4d70464b77a921a744e9728 t/plugin/fixups.t
@@ -39,16 +40,16 @@ SHA1 3d1910efbb8d13bbbfd348132c7cfac7995fa82a t/release-no-smart-comments.t
 SHA1 455d1dd1867212a665ad5ea4126b572411de300c t/release-no-tabs.t
 SHA1 83452c07c8c1049e2e699765020dbafdddceb763 t/release-pod-coverage.t
 SHA1 f02390837e08f1f1b9b343fa21ed2aaae5885ea5 t/release-pod-syntax.t
-SHA1 4701c7ea0ad0838e3725d893c7f3e6bafe0203da t/release-portability.t
+SHA1 c87c072b22826f7264146f89029b21a4e2f23931 t/requires_external.t
 SHA1 42ec11c1d87b612e85e2d631b3106de5d84ab653 t/role.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.11 (GNU/Linux)
 
-iQEcBAEBAgAGBQJQbRpgAAoJEOd5N1CvIgQkpdsH/0/37zeTCICanF8edlM16NM+
-EUnn9jjW92Qg7nY9irXehSsvJ3me9224iLRWRTW5zmmaqfO+lx43qcY1ze33XkrT
-laVaUaYf7E/0umno5Tg37qxQp5Jt4cgqMjVyFgf4aj8g2Ne8ZdEBioPE2JhiMLTY
-yFiKosTeCFB2o0F1hCJ2CJxPXkpzJt4ET6Hj+EhakZTwx7KnRvN/CUt1DNDuyoJV
-CZK+jPO9Xhb0CIkr7pTzaa1LL3MwUd9Y+/IXckxIYF/Jt/YKz9GVT5haRpfEF9wD
-iHKACwDbVkdvV/ESUuHx1gbgWMLm3iiC8YhfgJ+cGylRUlOuxNWaZGoj1TIxqX0=
-=Wsr9
+iQEcBAEBAgAGBQJQpIhAAAoJEOd5N1CvIgQkfBsH/109YMEwMc4/sRyQVGOluBLQ
+JttuQRnA8E0zgY97gLfC90tMK6dNcsu6NrFftxqnH1adHHuG2BMCvjeIkI23Gpxc
+aAUSYXxRhNdAR73Dk6sMywq3perYPI9Fz4bS5Ut7KrpBLfrM5Ur0PcKNkcH66L59
+VZBol+FT7ZhMASBeNyEzEz0UaESaQRO0CJnf6NsxlS+a6DKaIe2c6e7tkm+KaCpL
+6CGk4C1+d2EbhS/gKohhz9cneIstvatAxJIdGLLV2aFhxU0wXbCxzs6BgC8J+tw0
+QKVAR3x0rltn2I+eCtEOEbB2A+dcjg6nw5vh1WtSnt2cq2s0gJ9CFVhLg336uU0=
+=0EtX
 -----END PGP SIGNATURE-----

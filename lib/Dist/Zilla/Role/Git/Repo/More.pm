@@ -9,7 +9,7 @@
 #
 package Dist::Zilla::Role::Git::Repo::More;
 {
-  $Dist::Zilla::Role::Git::Repo::More::VERSION = '0.005';
+  $Dist::Zilla::Role::Git::Repo::More::VERSION = '0.006';
 }
 
 # ABSTRACT: A little more than Dist::Zilla::Role::Git::Repo
@@ -101,7 +101,7 @@ Dist::Zilla::Role::Git::Repo::More - A little more than Dist::Zilla::Role::Git::
 
 =head1 VERSION
 
-This document describes version 0.005 of Dist::Zilla::Role::Git::Repo::More - released October 03, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.006 of Dist::Zilla::Role::Git::Repo::More - released November 14, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 
@@ -147,6 +147,20 @@ feature.
 =head1 AUTHOR
 
 Chris Weyl <cweyl@alumni.drew.edu>
+
+=head1 CONTRIBUTORS
+
+=over 4
+
+=item *
+
+Karen Etheridge L<ETHER|https://metacpan.org/author/ETHER>
+
+=item *
+
+Mike Doherty L<DOHERTY|https://metacpan.org/author/DOHERTY>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 

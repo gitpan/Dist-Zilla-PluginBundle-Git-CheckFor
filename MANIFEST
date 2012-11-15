@@ -10,6 +10,7 @@ SIGNATURE
 dist.ini
 lib/Dist/Zilla/Plugin/Git/CheckFor/CorrectBranch.pm
 lib/Dist/Zilla/Plugin/Git/CheckFor/Fixups.pm
+lib/Dist/Zilla/Plugin/Git/CheckFor/MergeConflicts.pm
 lib/Dist/Zilla/PluginBundle/Git/CheckFor.pm
 lib/Dist/Zilla/Role/Git/Repo/More.pm
 t/00-compile.t
@@ -24,5 +25,5 @@ t/release-no-smart-comments.t
 t/release-no-tabs.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t
-t/release-portability.t
+t/requires_external.t
 t/role.t

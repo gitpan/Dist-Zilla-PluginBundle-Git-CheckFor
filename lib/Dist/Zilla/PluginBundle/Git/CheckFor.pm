@@ -9,7 +9,7 @@
 #
 package Dist::Zilla::PluginBundle::Git::CheckFor;
 {
-  $Dist::Zilla::PluginBundle::Git::CheckFor::VERSION = '0.005';
+  $Dist::Zilla::PluginBundle::Git::CheckFor::VERSION = '0.006';
 }
 
 # ABSTRACT: All Git::CheckFor plugins at once
@@ -25,6 +25,7 @@ sub configure {
     $self->add_plugins(
         [ 'Git::CheckFor::CorrectBranch' => $self->config_slice('release_branch') ],
         'Git::CheckFor::Fixups',
+        'Git::CheckFor::MergeConflicts',
     );
 
     return;
@@ -50,7 +51,7 @@ Dist::Zilla::PluginBundle::Git::CheckFor - All Git::CheckFor plugins at once
 
 =head1 VERSION
 
-This document describes version 0.005 of Dist::Zilla::PluginBundle::Git::CheckFor - released October 03, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.006 of Dist::Zilla::PluginBundle::Git::CheckFor - released November 14, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 
@@ -83,6 +84,10 @@ L<Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch>
 
 =item *
 
+L<Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts>
+
+=item *
+
 L<Dist::Zilla::PluginBundle::Git>
 
 =back
@@ -104,6 +109,20 @@ feature.
 =head1 AUTHOR
 
 Chris Weyl <cweyl@alumni.drew.edu>
+
+=head1 CONTRIBUTORS
+
+=over 4
+
+=item *
+
+Karen Etheridge L<ETHER|https://metacpan.org/author/ETHER>
+
+=item *
+
+Mike Doherty L<DOHERTY|https://metacpan.org/author/DOHERTY>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 
