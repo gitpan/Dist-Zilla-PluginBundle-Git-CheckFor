@@ -8,9 +8,14 @@
 #   The GNU Lesser General Public License, Version 2.1, February 1999
 #
 package Dist::Zilla::PluginBundle::Git::CheckFor;
-{
-  $Dist::Zilla::PluginBundle::Git::CheckFor::VERSION = '0.006';
+BEGIN {
+  $Dist::Zilla::PluginBundle::Git::CheckFor::AUTHORITY = 'cpan:RSRCHBOY';
 }
+{
+  $Dist::Zilla::PluginBundle::Git::CheckFor::VERSION = '0.007';
+}
+# git description: 0.006-14-g425b56f
+
 
 # ABSTRACT: All Git::CheckFor plugins at once
 
@@ -43,7 +48,8 @@ __END__
 
 =encoding utf-8
 
-=for :stopwords Chris Weyl
+=for :stopwords Chris Weyl Karen Etheridge Mike Doherty <ether@cpan.org>
+<doherty@cs.dal.ca>
 
 =head1 NAME
 
@@ -51,7 +57,7 @@ Dist::Zilla::PluginBundle::Git::CheckFor - All Git::CheckFor plugins at once
 
 =head1 VERSION
 
-This document describes version 0.006 of Dist::Zilla::PluginBundle::Git::CheckFor - released November 14, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.007 of Dist::Zilla::PluginBundle::Git::CheckFor - released September 29, 2013 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 
@@ -116,11 +122,11 @@ Chris Weyl <cweyl@alumni.drew.edu>
 
 =item *
 
-Karen Etheridge L<ETHER|https://metacpan.org/author/ETHER>
+Karen Etheridge <ether@cpan.org>
 
 =item *
 
-Mike Doherty L<DOHERTY|https://metacpan.org/author/DOHERTY>
+Mike Doherty <doherty@cs.dal.ca>
 
 =back
 

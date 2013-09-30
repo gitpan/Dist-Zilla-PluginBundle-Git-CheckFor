@@ -3,9 +3,9 @@ NAME
     once
 
 VERSION
-    This document describes version 0.006 of
-    Dist::Zilla::PluginBundle::Git::CheckFor - released November 14, 2012 as
-    part of Dist-Zilla-PluginBundle-Git-CheckFor.
+    This document describes version 0.007 of
+    Dist::Zilla::PluginBundle::Git::CheckFor - released September 29, 2013
+    as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 SYNOPSIS
         ; in dist.ini
@@ -45,9 +45,9 @@ AUTHOR
     Chris Weyl <cweyl@alumni.drew.edu>
 
 CONTRIBUTORS
-    *   Karen Etheridge ETHER <https://metacpan.org/author/ETHER>
+    *   Karen Etheridge <ether@cpan.org>
 
-    *   Mike Doherty DOHERTY <https://metacpan.org/author/DOHERTY>
+    *   Mike Doherty <doherty@cs.dal.ca>
 
 COPYRIGHT AND LICENSE
     This software is Copyright (c) 2012 by Chris Weyl.

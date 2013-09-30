@@ -16,6 +16,7 @@ use IPC::System::Simple (); # for autodie && prereqs
 use File::chdir;
 use Path::Class;
 use Capture::Tiny 'capture_merged';
+use Try::Tiny;
 
 use Test::DZil;
 
@@ -27,7 +28,10 @@ sub make_test_repo {
     note "Repo being created at $repo_root";
     local $CWD = "$repo_root";
 
-    unshift @commands, 'git init'
+    unshift @commands,
+        'git init',
+        'git config user.name "No One"',
+        'git config user.email "no@one.com"'
         unless $commands[0] =~ /git init/;
 
     # If we're not a code ref, make us one.
@@ -37,7 +41,14 @@ sub make_test_repo {
         ;
 
     # this is just to keep things quiet...
-    capture_merged { $_->() } for @commands;
+    my $fail = q{};
+    my $merged = capture_merged {
+        try { $_->() } catch { $fail .= $_ }
+            for @commands;
+    };
+
+    die "Building git repo FAILED: $fail\n\nLOG:\n$merged"
+        if $fail ne q{};
 
     return $repo_root;
 }

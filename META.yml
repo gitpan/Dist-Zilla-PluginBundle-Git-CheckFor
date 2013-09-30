@@ -5,20 +5,22 @@ author:
 build_requires:
   Capture::Tiny: 0
   Env::Path: 0
-  File::Find: 0
-  File::Temp: 0
+  File::Spec: 0
   File::chdir: 0
+  IO::Handle: 0
+  IPC::Open3: 0
   Path::Class: 0
+  Test::CheckDeps: 0.007
   Test::DZil: 0
   Test::Fatal: 0
   Test::Moose::More: 0.008
-  Test::More: 0.88
+  Test::More: 0.94
   Test::Most: 0
   Test::TempDir: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300028, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 4.300039, CPAN::Meta::Converter version 2.132661'
 license: lgpl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -31,19 +33,19 @@ no_index:
 provides:
   Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch:
     file: lib/Dist/Zilla/Plugin/Git/CheckFor/CorrectBranch.pm
-    version: 0.006
+    version: 0.007
   Dist::Zilla::Plugin::Git::CheckFor::Fixups:
     file: lib/Dist/Zilla/Plugin/Git/CheckFor/Fixups.pm
-    version: 0.006
+    version: 0.007
   Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts:
     file: lib/Dist/Zilla/Plugin/Git/CheckFor/MergeConflicts.pm
-    version: 0.006
+    version: 0.007
   Dist::Zilla::PluginBundle::Git::CheckFor:
     file: lib/Dist/Zilla/PluginBundle/Git/CheckFor.pm
-    version: 0.006
+    version: 0.007
   Dist::Zilla::Role::Git::Repo::More:
     file: lib/Dist/Zilla/Role/Git/Repo/More.pm
-    version: 0.006
+    version: 0.007
 requires:
   Dist::Zilla::Plugin::Git::NextVersion: 1.120370
   Dist::Zilla::Role::BeforeRelease: 0
@@ -60,214 +62,320 @@ requires:
   Try::Tiny: 0
   autodie: 0
   namespace::autoclean: 0
-  perl: 5.006
+  perl: 5.008
   strict: 0
   warnings: 0
 resources:
   bugtracker: https://github.com/RsrchBoy/dist-zilla-pluginbundle-git-checkfor/issues
   homepage: http://metacpan.org/release/Dist-Zilla-PluginBundle-Git-CheckFor/
   repository: git://github.com/RsrchBoy/dist-zilla-pluginbundle-git-checkfor.git
-version: 0.006
+version: 0.007
 x_Dist_Zilla:
   perl:
-    version: 5.016001
+    version: 5.018001
   plugins:
     -
+      class: Dist::Zilla::Plugin::Bootstrap::lib
+      config:
+        Dist::Zilla::Role::Bootstrap:
+          distname: Dist-Zilla-PluginBundle-Git-CheckFor
+          fallback: 1
+          try_built: ~
+          try_built_method: mtime
+      name: Bootstrap::lib
+      version: 0.04000000
+    -
       class: Dist::Zilla::Plugin::NextRelease
-      name: '@Filter/NextRelease'
-      version: 4.300028
-    -
-      class: Dist::Zilla::Plugin::Git::Check
-      name: '@Filter/@Git/Check'
-      version: 2.001
-    -
-      class: Dist::Zilla::Plugin::Git::Commit
-      name: '@Filter/@Git/Commit'
-      version: 2.001
-    -
-      class: Dist::Zilla::Plugin::Git::Tag
-      name: '@Filter/@Git/Tag'
-      version: 2.001
-    -
-      class: Dist::Zilla::Plugin::Git::Push
-      name: '@Filter/@Git/Push'
-      version: 2.001
+      name: '@RSRCHBOY/NextRelease'
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::Git::NextVersion
-      name: '@Filter/Git::NextVersion'
-      version: 2.001
+      name: '@RSRCHBOY/Git::NextVersion'
+      version: 2.014
+    -
+      class: Dist::Zilla::Plugin::ContributorsFromGit
+      name: '@RSRCHBOY/ContributorsFromGit'
+      version: 0.006
     -
       class: Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch
-      name: '@Filter/@Git::CheckFor/Git::CheckFor::CorrectBranch'
-      version: 0.005
+      name: '@RSRCHBOY/@Git::CheckFor/Git::CheckFor::CorrectBranch'
+      version: ~
     -
       class: Dist::Zilla::Plugin::Git::CheckFor::Fixups
-      name: '@Filter/@Git::CheckFor/Git::CheckFor::Fixups'
-      version: 0.005
+      name: '@RSRCHBOY/@Git::CheckFor/Git::CheckFor::Fixups'
+      version: ~
+    -
+      class: Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts
+      name: '@RSRCHBOY/@Git::CheckFor/Git::CheckFor::MergeConflicts'
+      version: ~
     -
       class: Dist::Zilla::Plugin::GatherDir
-      name: '@Filter/GatherDir'
-      version: 4.300028
+      name: '@RSRCHBOY/GatherDir'
+      version: 4.300039
+    -
+      class: Dist::Zilla::Plugin::PromptIfStale
+      name: '@RSRCHBOY/PromptIfStale'
+      version: 0.006
     -
       class: Dist::Zilla::Plugin::PruneCruft
-      name: '@Filter/PruneCruft'
-      version: 4.300028
+      name: '@RSRCHBOY/PruneCruft'
+      version: 4.300039
+    -
+      class: Dist::Zilla::Plugin::Git::Describe
+      name: '@RSRCHBOY/Git::Describe'
+      version: 0.003
     -
       class: Dist::Zilla::Plugin::ExecDir
-      name: '@Filter/ExecDir'
-      version: 4.300028
+      name: '@RSRCHBOY/ExecDir'
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::ShareDir
-      name: '@Filter/ShareDir'
-      version: 4.300028
+      name: '@RSRCHBOY/ShareDir'
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::MakeMaker
-      name: '@Filter/MakeMaker'
-      version: 4.300028
+      name: '@RSRCHBOY/MakeMaker'
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::InstallGuide
-      name: '@Filter/InstallGuide'
-      version: 1.200000
+      name: '@RSRCHBOY/InstallGuide'
+      version: 1.200001
     -
       class: Dist::Zilla::Plugin::Manifest
-      name: '@Filter/Manifest'
-      version: 4.300028
+      name: '@RSRCHBOY/Manifest'
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::SurgicalPkgVersion
-      name: '@Filter/SurgicalPkgVersion'
+      name: '@RSRCHBOY/SurgicalPkgVersion'
       version: 0.0019
     -
       class: Dist::Zilla::Plugin::ReadmeFromPod
-      name: '@Filter/ReadmeFromPod'
-      version: 0.16
+      name: '@RSRCHBOY/ReadmeFromPod'
+      version: 0.18
     -
       class: Dist::Zilla::Plugin::MinimumPerl
-      name: '@Filter/MinimumPerl'
+      name: '@RSRCHBOY/MinimumPerl'
       version: 1.003
     -
       class: Dist::Zilla::Plugin::ReportVersions::Tiny
-      name: '@Filter/ReportVersions::Tiny'
-      version: 1.08
+      name: '@RSRCHBOY/ReportVersions::Tiny'
+      version: 1.09
     -
       class: Dist::Zilla::Plugin::AutoPrereqs
-      name: '@Filter/AutoPrereqs'
-      version: 4.300028
+      name: '@RSRCHBOY/AutoPrereqs'
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::Prepender
-      name: '@Filter/Prepender'
+      name: '@RSRCHBOY/Prepender'
       version: 1.112280
     -
       class: Dist::Zilla::Plugin::ConsistentVersionTest
-      name: '@Filter/ConsistentVersionTest'
+      name: '@RSRCHBOY/ConsistentVersionTest'
       version: 0.02
     -
       class: Dist::Zilla::Plugin::PodCoverageTests
-      name: '@Filter/PodCoverageTests'
-      version: 4.300028
+      name: '@RSRCHBOY/PodCoverageTests'
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::PodSyntaxTests
-      name: '@Filter/PodSyntaxTests'
-      version: 4.300028
+      name: '@RSRCHBOY/PodSyntaxTests'
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::NoTabsTests
-      name: '@Filter/NoTabsTests'
-      version: 0.01
+      config:
+        Dist::Zilla::Plugin::Test::NoTabs:
+          module_finder:
+            - ':InstallModules'
+          script_finder:
+            - ':ExecFiles'
+      name: '@RSRCHBOY/NoTabsTests'
+      version: 0.04
     -
       class: Dist::Zilla::Plugin::EOLTests
-      name: '@Filter/EOLTests'
+      name: '@RSRCHBOY/EOLTests'
       version: 0.02
     -
       class: Dist::Zilla::Plugin::HasVersionTests
-      name: '@Filter/HasVersionTests'
+      name: '@RSRCHBOY/HasVersionTests'
       version: 1.101420
     -
       class: Dist::Zilla::Plugin::Test::Compile
-      name: '@Filter/Test::Compile'
-      version: 1.112820
-    -
-      class: Dist::Zilla::Plugin::ExtraTests
-      name: '@Filter/ExtraTests'
-      version: 4.300028
+      config:
+        Dist::Zilla::Plugin::Test::Compile:
+          module_finder:
+            - ':InstallModules'
+          script_finder:
+            - ':ExecFiles'
+      name: '@RSRCHBOY/Test::Compile'
+      version: 2.033
     -
       class: Dist::Zilla::Plugin::NoSmartCommentsTests
-      name: '@Filter/NoSmartCommentsTests'
+      name: '@RSRCHBOY/NoSmartCommentsTests'
       version: 0.006
     -
+      class: Dist::Zilla::Plugin::Test::Pod::LinkCheck
+      name: '@RSRCHBOY/Test::Pod::LinkCheck'
+      version: 1.001
+    -
+      class: Dist::Zilla::Plugin::RunExtraTests
+      name: '@RSRCHBOY/RunExtraTests'
+      version: 0.011
+    -
+      class: Dist::Zilla::Plugin::CheckExtraTests
+      name: '@RSRCHBOY/CheckExtraTests'
+      version: 0.011
+    -
+      class: Dist::Zilla::Plugin::Test::MinimumVersion
+      name: '@RSRCHBOY/Test::MinimumVersion'
+      version: 2.000005
+    -
+      class: Dist::Zilla::Plugin::Authority
+      name: '@RSRCHBOY/Authority'
+      version: 1.006
+    -
       class: Dist::Zilla::Plugin::MetaConfig
-      name: '@Filter/MetaConfig'
-      version: 4.300028
+      name: '@RSRCHBOY/MetaConfig'
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::MetaJSON
-      name: '@Filter/MetaJSON'
-      version: 4.300028
+      name: '@RSRCHBOY/MetaJSON'
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::MetaYAML
-      name: '@Filter/MetaYAML'
-      version: 4.300028
+      name: '@RSRCHBOY/MetaYAML'
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::MetaNoIndex
-      name: '@Filter/MetaNoIndex'
-      version: 4.300028
+      name: '@RSRCHBOY/MetaNoIndex'
+      version: 4.300039
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: '@RSRCHBOY/MetaProvides::Package/AUTOVIV/:InstallModulesPM'
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::MetaProvides::Package
-      name: '@Filter/MetaProvides::Package'
-      version: 1.14000001
+      config:
+        Dist::Zilla::Plugin::MetaProvides::Package: {}
+        Dist::Zilla::Role::MetaProvider::Provider:
+          inherit_missing: 1
+          inherit_version: 1
+          meta_noindex: 1
+      name: '@RSRCHBOY/MetaProvides::Package'
+      version: 1.15000000
     -
       class: Dist::Zilla::Plugin::GitHub::Meta
-      name: '@Filter/GitHub::Meta'
-      version: 0.27
+      name: '@RSRCHBOY/GitHub::Meta'
+      version: 0.35
     -
       class: Dist::Zilla::Plugin::TestRelease
-      name: '@Filter/TestRelease'
-      version: 4.300028
+      name: '@RSRCHBOY/TestRelease'
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::CheckChangesHasContent
-      name: '@Filter/CheckChangesHasContent'
+      name: '@RSRCHBOY/CheckChangesHasContent'
       version: 0.006
     -
       class: Dist::Zilla::Plugin::CheckPrereqsIndexed
-      name: '@Filter/CheckPrereqsIndexed'
-      version: 0.007
+      name: '@RSRCHBOY/CheckPrereqsIndexed'
+      version: 0.009
     -
-      class: Dist::Zilla::Plugin::ConfirmRelease
-      name: '@Filter/ConfirmRelease'
-      version: 4.300028
+      class: Dist::Zilla::Plugin::Git::Remote::Update
+      name: '@RSRCHBOY/GitFetchOrigin'
+      version: 0.1.2
     -
-      class: Dist::Zilla::Plugin::GitHub::Update
-      name: '@Filter/GitHub::Update'
-      version: 0.27
+      class: Dist::Zilla::Plugin::Git::Remote::Check
+      name: '@RSRCHBOY/GitCheckReleaseBranchSync'
+      version: 0.1.2
+    -
+      class: Dist::Zilla::Plugin::Git::Remote::Check
+      name: '@RSRCHBOY/GitCheckMasterBranchSync'
+      version: 0.1.2
+    -
+      class: Dist::Zilla::Plugin::Git::Check
+      name: '@RSRCHBOY/Git::Check'
+      version: 2.014
+    -
+      class: Dist::Zilla::Plugin::Git::Commit
+      name: '@RSRCHBOY/Git::Commit'
+      version: 2.014
+    -
+      class: Dist::Zilla::Plugin::Test::CheckDeps
+      name: '@RSRCHBOY/Test::CheckDeps'
+      version: 0.009
+    -
+      class: Dist::Zilla::Plugin::Travis::ConfigForReleaseBranch
+      name: '@RSRCHBOY/Travis::ConfigForReleaseBranch'
+      version: 0.001
+    -
+      class: Dist::Zilla::Plugin::SchwartzRatio
+      name: '@RSRCHBOY/SchwartzRatio'
+      version: 0.2.0
+    -
+      class: Dist::Zilla::Plugin::Git::Tag
+      name: '@RSRCHBOY/Git::Tag'
+      version: 2.014
+    -
+      class: Dist::Zilla::Plugin::Git::CommitBuild
+      name: '@RSRCHBOY/Git::CommitBuild::Build'
+      version: 2.014
+    -
+      class: Dist::Zilla::Plugin::Git::CommitBuild
+      name: '@RSRCHBOY/Git::CommitBuild::Release'
+      version: 2.014
+    -
+      class: Dist::Zilla::Plugin::Git::Push
+      name: '@RSRCHBOY/Git::Push'
+      version: 2.014
     -
       class: Dist::Zilla::Plugin::UploadToCPAN
-      name: '@Filter/UploadToCPAN'
-      version: 4.300028
+      name: '@RSRCHBOY/UploadToCPAN'
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::Signature
-      name: '@Filter/Signature'
+      name: '@RSRCHBOY/Signature'
       version: 1.100930
     -
       class: Dist::Zilla::Plugin::InstallRelease
-      name: '@Filter/InstallRelease'
+      name: '@RSRCHBOY/InstallRelease'
       version: 0.008
     -
+      class: Dist::Zilla::Plugin::GitHub::Update
+      name: '@RSRCHBOY/GitHub::Update'
+      version: 0.35
+    -
       class: Dist::Zilla::Plugin::ArchiveRelease
-      name: '@Filter/ArchiveRelease'
+      name: '@RSRCHBOY/ArchiveRelease'
       version: 4.00
     -
+      class: Dist::Zilla::Plugin::ConfirmRelease
+      name: '@RSRCHBOY/ConfirmRelease'
+      version: 4.300039
+    -
       class: Dist::Zilla::Plugin::License
-      name: '@Filter/License'
-      version: 4.300028
+      name: '@RSRCHBOY/License'
+      version: 4.300039
+    -
+      class: Dist::Zilla::Plugin::CPANFile
+      name: '@RSRCHBOY/CPANFile'
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::CopyFilesFromBuild
-      name: '@Filter/CopyFilesFromBuild'
+      name: '@RSRCHBOY/CopyFilesFromBuild'
       version: 0.103510
     -
       class: Dist::Zilla::Plugin::ReadmeAnyFromPod
-      name: '@Filter/ReadmePodInRoot'
-      version: 0.120120
+      name: '@RSRCHBOY/ReadmeMarkdownInRoot'
+      version: 0.131500
     -
       class: Dist::Zilla::Plugin::PodWeaver
-      name: '@Filter/PodWeaver'
-      version: 3.101641
+      config:
+        Dist::Zilla::Plugin::PodWeaver:
+          config_plugin: '@RSRCHBOY'
+          finder:
+            - ':InstallModules'
+            - ':ExecFiles'
+      name: '@RSRCHBOY/PodWeaver'
+      version: 3.102000
     -
       class: Dist::Zilla::Plugin::RequiresExternal
       name: RequiresExternal
@@ -275,29 +383,33 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
-      version: 4.300028
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':IncModules'
-      version: 4.300028
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':TestFiles'
-      version: 4.300028
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':ExecFiles'
-      version: 4.300028
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':ShareFiles'
-      version: 4.300028
+      version: 4.300039
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':MainModule'
-      version: 4.300028
+      version: 4.300039
   zilla:
     class: Dist::Zilla::Dist::Builder
     config:
       is_trial: 0
-    version: 4.300028
+    version: 4.300039
+x_authority: cpan:RSRCHBOY
+x_contributors:
+  - 'Karen Etheridge <ether@cpan.org>'
+  - 'Mike Doherty <doherty@cs.dal.ca>'

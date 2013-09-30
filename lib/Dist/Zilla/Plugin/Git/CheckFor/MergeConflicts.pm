@@ -8,8 +8,11 @@
 #   The GNU Lesser General Public License, Version 2.1, February 1999
 #
 package Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts;
+BEGIN {
+  $Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts::AUTHORITY = 'cpan:RSRCHBOY';
+}
 {
-  $Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts::VERSION = '0.006';
+  $Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts::VERSION = '0.007';
 }
 use strict;
 use warnings;
@@ -96,7 +99,8 @@ __END__
 
 =encoding utf-8
 
-=for :stopwords Chris Weyl
+=for :stopwords Chris Weyl Karen Etheridge <ether@cpan.org> Mike Doherty
+<doherty@cs.dal.ca>
 
 =head1 NAME
 
@@ -104,7 +108,7 @@ Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts - Check your repo for merge-c
 
 =head1 VERSION
 
-This document describes version 0.006 of Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts - released November 14, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.007 of Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts - released September 29, 2013 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 
@@ -155,20 +159,6 @@ feature.
 =head1 AUTHOR
 
 Chris Weyl <cweyl@alumni.drew.edu>
-
-=head1 CONTRIBUTORS
-
-=over 4
-
-=item *
-
-Karen Etheridge L<ETHER|https://metacpan.org/author/ETHER>
-
-=item *
-
-Mike Doherty L<DOHERTY|https://metacpan.org/author/DOHERTY>
-
-=back
 
 =head1 COPYRIGHT AND LICENSE
 

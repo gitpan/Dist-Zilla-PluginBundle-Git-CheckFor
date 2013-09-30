@@ -8,8 +8,11 @@
 #   The GNU Lesser General Public License, Version 2.1, February 1999
 #
 package Dist::Zilla::Role::Git::Repo::More;
+BEGIN {
+  $Dist::Zilla::Role::Git::Repo::More::AUTHORITY = 'cpan:RSRCHBOY';
+}
 {
-  $Dist::Zilla::Role::Git::Repo::More::VERSION = '0.006';
+  $Dist::Zilla::Role::Git::Repo::More::VERSION = '0.007';
 }
 
 # ABSTRACT: A little more than Dist::Zilla::Role::Git::Repo
@@ -93,7 +96,8 @@ __END__
 
 =encoding utf-8
 
-=for :stopwords Chris Weyl
+=for :stopwords Chris Weyl Karen Etheridge Mike Doherty <ether@cpan.org>
+<doherty@cs.dal.ca>
 
 =head1 NAME
 
@@ -101,7 +105,7 @@ Dist::Zilla::Role::Git::Repo::More - A little more than Dist::Zilla::Role::Git::
 
 =head1 VERSION
 
-This document describes version 0.006 of Dist::Zilla::Role::Git::Repo::More - released November 14, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.007 of Dist::Zilla::Role::Git::Repo::More - released September 29, 2013 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 
@@ -147,20 +151,6 @@ feature.
 =head1 AUTHOR
 
 Chris Weyl <cweyl@alumni.drew.edu>
-
-=head1 CONTRIBUTORS
-
-=over 4
-
-=item *
-
-Karen Etheridge L<ETHER|https://metacpan.org/author/ETHER>
-
-=item *
-
-Mike Doherty L<DOHERTY|https://metacpan.org/author/DOHERTY>
-
-=back
 
 =head1 COPYRIGHT AND LICENSE
 

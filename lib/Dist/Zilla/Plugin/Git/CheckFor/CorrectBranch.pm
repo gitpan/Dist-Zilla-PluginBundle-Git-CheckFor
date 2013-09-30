@@ -8,8 +8,11 @@
 #   The GNU Lesser General Public License, Version 2.1, February 1999
 #
 package Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch;
+BEGIN {
+  $Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch::AUTHORITY = 'cpan:RSRCHBOY';
+}
 {
-  $Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch::VERSION = '0.006';
+  $Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch::VERSION = '0.007';
 }
 
 # ABSTRACT: Check that you're on the correct branch before release
@@ -70,7 +73,8 @@ __END__
 
 =encoding utf-8
 
-=for :stopwords Chris Weyl
+=for :stopwords Chris Weyl Karen Etheridge Mike Doherty <ether@cpan.org>
+<doherty@cs.dal.ca>
 
 =head1 NAME
 
@@ -78,7 +82,7 @@ Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch - Check that you're on the cor
 
 =head1 VERSION
 
-This document describes version 0.006 of Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch - released November 14, 2012 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.007 of Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch - released September 29, 2013 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 
@@ -151,20 +155,6 @@ feature.
 =head1 AUTHOR
 
 Chris Weyl <cweyl@alumni.drew.edu>
-
-=head1 CONTRIBUTORS
-
-=over 4
-
-=item *
-
-Karen Etheridge L<ETHER|https://metacpan.org/author/ETHER>
-
-=item *
-
-Mike Doherty L<DOHERTY|https://metacpan.org/author/DOHERTY>
-
-=back
 
 =head1 COPYRIGHT AND LICENSE
 
