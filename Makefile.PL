@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use 5.008;
+use 5.006;
 
 use ExtUtils::MakeMaker 6.30;
 
@@ -46,7 +46,7 @@ my %WriteMakefileArgs = (
     "IO::Handle" => 0,
     "IPC::Open3" => 0,
     "Path::Class" => 0,
-    "Test::CheckDeps" => "0.007",
+    "Test::CheckDeps" => "0.010",
     "Test::DZil" => 0,
     "Test::Fatal" => 0,
     "Test::Moose::More" => "0.008",
@@ -54,37 +54,52 @@ my %WriteMakefileArgs = (
     "Test::Most" => 0,
     "Test::TempDir" => 0
   },
-  "VERSION" => "0.007",
+  "VERSION" => "0.008",
   "test" => {
     "TESTS" => "t/*.t t/plugin/*.t"
   }
 );
 
 
-unless ( eval { ExtUtils::MakeMaker->VERSION(6.63_03) } ) {
-  my $tr = delete $WriteMakefileArgs{TEST_REQUIRES};
-  my $br = $WriteMakefileArgs{BUILD_REQUIRES};
-  for my $mod ( keys %$tr ) {
-    if ( exists $br->{$mod} ) {
-      $br->{$mod} = $tr->{$mod} if $tr->{$mod} > $br->{$mod};
-    }
-    else {
-      $br->{$mod} = $tr->{$mod};
-    }
-  }
-}
+my %FallbackPrereqs = (
+  "Capture::Tiny" => 0,
+  "Dist::Zilla::Plugin::Git::NextVersion" => "1.120370",
+  "Dist::Zilla::Role::BeforeRelease" => 0,
+  "Dist::Zilla::Role::Git::Repo" => 0,
+  "Dist::Zilla::Role::PluginBundle::Easy" => 0,
+  "Env::Path" => 0,
+  "File::Spec" => 0,
+  "File::chdir" => 0,
+  "Git::Wrapper" => 0,
+  "IO::Handle" => 0,
+  "IPC::Open3" => 0,
+  "IPC::System::Simple" => 0,
+  "List::MoreUtils" => 0,
+  "List::Util" => 0,
+  "Moose" => 0,
+  "Moose::Autobox" => 0,
+  "Moose::Role" => 0,
+  "MooseX::AttributeShortcuts" => 0,
+  "Path::Class" => 0,
+  "Test::CheckDeps" => "0.010",
+  "Test::DZil" => 0,
+  "Test::Fatal" => 0,
+  "Test::Moose::More" => "0.008",
+  "Test::More" => "0.94",
+  "Test::Most" => 0,
+  "Test::TempDir" => 0,
+  "Try::Tiny" => 0,
+  "autodie" => 0,
+  "namespace::autoclean" => 0,
+  "strict" => 0,
+  "warnings" => 0
+);
 
-unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
-  my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
-  my $pp = $WriteMakefileArgs{PREREQ_PM};
-  for my $mod ( keys %$br ) {
-    if ( exists $pp->{$mod} ) {
-      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod};
-    }
-    else {
-      $pp->{$mod} = $br->{$mod};
-    }
-  }
+
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.63_03) } ) {
+  delete $WriteMakefileArgs{TEST_REQUIRES};
+  delete $WriteMakefileArgs{BUILD_REQUIRES};
+  $WriteMakefileArgs{PREREQ_PM} = \%FallbackPrereqs;
 }
 
 delete $WriteMakefileArgs{CONFIGURE_REQUIRES}

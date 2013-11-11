@@ -12,9 +12,9 @@ BEGIN {
   $Dist::Zilla::PluginBundle::Git::CheckFor::AUTHORITY = 'cpan:RSRCHBOY';
 }
 {
-  $Dist::Zilla::PluginBundle::Git::CheckFor::VERSION = '0.007';
+  $Dist::Zilla::PluginBundle::Git::CheckFor::VERSION = '0.008';
 }
-# git description: 0.006-14-g425b56f
+# git description: 0.007-7-gc51a415
 
 
 # ABSTRACT: All Git::CheckFor plugins at once
@@ -46,10 +46,10 @@ __END__
 
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
-=for :stopwords Chris Weyl Karen Etheridge Mike Doherty <ether@cpan.org>
-<doherty@cs.dal.ca>
+=for :stopwords Chris Weyl Karen Etheridge Mike Doherty Olivier Mengué <ether@cpan.org>
+<doherty@cs.dal.ca> <dolmen@cpan.org>
 
 =head1 NAME
 
@@ -57,7 +57,7 @@ Dist::Zilla::PluginBundle::Git::CheckFor - All Git::CheckFor plugins at once
 
 =head1 VERSION
 
-This document describes version 0.007 of Dist::Zilla::PluginBundle::Git::CheckFor - released September 29, 2013 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.008 of Dist::Zilla::PluginBundle::Git::CheckFor - released November 10, 2013 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 
@@ -127,6 +127,10 @@ Karen Etheridge <ether@cpan.org>
 =item *
 
 Mike Doherty <doherty@cs.dal.ca>
+
+=item *
+
+Olivier Mengué <dolmen@cpan.org>
 
 =back
 

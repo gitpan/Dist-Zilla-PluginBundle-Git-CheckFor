@@ -12,7 +12,7 @@ BEGIN {
   $Dist::Zilla::Role::Git::Repo::More::AUTHORITY = 'cpan:RSRCHBOY';
 }
 {
-  $Dist::Zilla::Role::Git::Repo::More::VERSION = '0.007';
+  $Dist::Zilla::Role::Git::Repo::More::VERSION = '0.008';
 }
 
 # ABSTRACT: A little more than Dist::Zilla::Role::Git::Repo
@@ -21,14 +21,15 @@ use Moose::Role;
 use namespace::autoclean;
 use MooseX::AttributeShortcuts;
 
-use Git::Wrapper;
-
 with
     'Dist::Zilla::Role::Git::Repo',
     ;
 
 has _repo => (is => 'lazy', isa => 'Git::Wrapper');
-sub _build__repo { Git::Wrapper->new(shift->repo_root) }
+sub _build__repo {
+  require Git::Wrapper;
+  Git::Wrapper->new(shift->repo_root)
+}
 
 
 # -- attributes
@@ -55,6 +56,7 @@ sub _build__previous_versions {
 
   local $/ = "\n"; # Force record separator to be single newline
 
+  require Git::Wrapper;
   my $git  = Git::Wrapper->new( $self->repo_root );
   my $regexp = $self->version_regexp;
 
@@ -94,10 +96,10 @@ __END__
 
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
-=for :stopwords Chris Weyl Karen Etheridge Mike Doherty <ether@cpan.org>
-<doherty@cs.dal.ca>
+=for :stopwords Chris Weyl Karen Etheridge <ether@cpan.org> Mike Doherty
+<doherty@cs.dal.ca> Olivier Mengué <dolmen@cpan.org>
 
 =head1 NAME
 
@@ -105,7 +107,7 @@ Dist::Zilla::Role::Git::Repo::More - A little more than Dist::Zilla::Role::Git::
 
 =head1 VERSION
 
-This document describes version 0.007 of Dist::Zilla::Role::Git::Repo::More - released September 29, 2013 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.008 of Dist::Zilla::Role::Git::Repo::More - released November 10, 2013 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 

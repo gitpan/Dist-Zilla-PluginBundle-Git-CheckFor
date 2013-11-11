@@ -12,7 +12,7 @@ BEGIN {
   $Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts::AUTHORITY = 'cpan:RSRCHBOY';
 }
 {
-  $Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts::VERSION = '0.007';
+  $Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts::VERSION = '0.008';
 }
 use strict;
 use warnings;
@@ -63,14 +63,16 @@ sub before_release {
     FILE:
     foreach my $file ( $self->zilla->files->flatten ) {
         next FILE
+            if $file->can('encoding') and $file->encoding eq 'bytes';
+
+        next FILE
             if $self->has_ignore
             and any { $file->name eq $_ } @{ $self->ignore };
 
         my $text = $file->content;
         foreach my $re ( @{ $self->merge_conflict_patterns } ) {
-            open my $from_mem_fh, '<', \$text;
-            while (<$from_mem_fh>) {
-                if ( m/($re)/ ) {
+            foreach my $line (split $/, $text) {
+                if ( $line =~ m/($re)/ ) {
                     push @{ $error_files{ $file->name } }, "matched $re at line $.";
                 }
             }
@@ -97,10 +99,10 @@ __END__
 
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
-=for :stopwords Chris Weyl Karen Etheridge <ether@cpan.org> Mike Doherty
-<doherty@cs.dal.ca>
+=for :stopwords Chris Weyl Karen Etheridge Mike Doherty Olivier Mengué <ether@cpan.org>
+<doherty@cs.dal.ca> <dolmen@cpan.org>
 
 =head1 NAME
 
@@ -108,7 +110,7 @@ Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts - Check your repo for merge-c
 
 =head1 VERSION
 
-This document describes version 0.007 of Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts - released September 29, 2013 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.008 of Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts - released November 10, 2013 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 

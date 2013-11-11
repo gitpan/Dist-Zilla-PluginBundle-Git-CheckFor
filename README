@@ -3,9 +3,9 @@ NAME
     once
 
 VERSION
-    This document describes version 0.007 of
-    Dist::Zilla::PluginBundle::Git::CheckFor - released September 29, 2013
-    as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+    This document describes version 0.008 of
+    Dist::Zilla::PluginBundle::Git::CheckFor - released November 10, 2013 as
+    part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 SYNOPSIS
         ; in dist.ini
@@ -48,6 +48,8 @@ CONTRIBUTORS
     *   Karen Etheridge <ether@cpan.org>
 
     *   Mike Doherty <doherty@cs.dal.ca>
+
+    *   Olivier Mengué <dolmen@cpan.org>
 
 COPYRIGHT AND LICENSE
     This software is Copyright (c) 2012 by Chris Weyl.

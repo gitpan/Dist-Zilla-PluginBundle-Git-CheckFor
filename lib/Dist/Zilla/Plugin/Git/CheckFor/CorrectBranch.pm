@@ -12,15 +12,13 @@ BEGIN {
   $Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch::AUTHORITY = 'cpan:RSRCHBOY';
 }
 {
-  $Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch::VERSION = '0.007';
+  $Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch::VERSION = '0.008';
 }
 
 # ABSTRACT: Check that you're on the correct branch before release
 
 use Moose;
 use namespace::autoclean;
-
-use Git::Wrapper;
 
 with
     'Dist::Zilla::Role::BeforeRelease',
@@ -71,10 +69,10 @@ __END__
 
 =pod
 
-=encoding utf-8
+=encoding UTF-8
 
-=for :stopwords Chris Weyl Karen Etheridge Mike Doherty <ether@cpan.org>
-<doherty@cs.dal.ca>
+=for :stopwords Chris Weyl Karen Etheridge Mike Doherty Olivier Mengué <ether@cpan.org>
+<doherty@cs.dal.ca> <dolmen@cpan.org>
 
 =head1 NAME
 
@@ -82,7 +80,7 @@ Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch - Check that you're on the cor
 
 =head1 VERSION
 
-This document describes version 0.007 of Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch - released September 29, 2013 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.008 of Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch - released November 10, 2013 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 
