@@ -11,10 +11,7 @@ package Dist::Zilla::Plugin::Git::CheckFor::Fixups;
 BEGIN {
   $Dist::Zilla::Plugin::Git::CheckFor::Fixups::AUTHORITY = 'cpan:RSRCHBOY';
 }
-{
-  $Dist::Zilla::Plugin::Git::CheckFor::Fixups::VERSION = '0.008';
-}
-
+$Dist::Zilla::Plugin::Git::CheckFor::Fixups::VERSION = '0.009';
 # ABSTRACT: Check your repo for fixup! and squash! before release
 
 use Moose;
@@ -119,8 +116,9 @@ __END__
 
 =encoding UTF-8
 
-=for :stopwords Chris Weyl Karen Etheridge <ether@cpan.org> Mike Doherty
-<doherty@cs.dal.ca> Olivier Mengué <dolmen@cpan.org>
+=for :stopwords Chris Weyl Christian Walde <walde.christian@googlemail.com> Karen Etheridge
+<ether@cpan.org> Mike Doherty <doherty@cs.dal.ca> Olivier Mengué
+<dolmen@cpan.org>
 
 =head1 NAME
 
@@ -128,7 +126,7 @@ Dist::Zilla::Plugin::Git::CheckFor::Fixups - Check your repo for fixup! and squa
 
 =head1 VERSION
 
-This document describes version 0.008 of Dist::Zilla::Plugin::Git::CheckFor::Fixups - released November 10, 2013 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.009 of Dist::Zilla::Plugin::Git::CheckFor::Fixups - released January 28, 2014 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 

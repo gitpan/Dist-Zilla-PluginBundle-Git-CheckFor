@@ -11,9 +11,7 @@ package Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts;
 BEGIN {
   $Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts::AUTHORITY = 'cpan:RSRCHBOY';
 }
-{
-  $Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts::VERSION = '0.008';
-}
+$Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts::VERSION = '0.009';
 use strict;
 use warnings;
 
@@ -101,8 +99,9 @@ __END__
 
 =encoding UTF-8
 
-=for :stopwords Chris Weyl Karen Etheridge Mike Doherty Olivier Mengué <ether@cpan.org>
-<doherty@cs.dal.ca> <dolmen@cpan.org>
+=for :stopwords Chris Weyl Christian Walde <walde.christian@googlemail.com> Karen Etheridge
+<ether@cpan.org> Mike Doherty <doherty@cs.dal.ca> Olivier Mengué
+<dolmen@cpan.org>
 
 =head1 NAME
 
@@ -110,7 +109,7 @@ Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts - Check your repo for merge-c
 
 =head1 VERSION
 
-This document describes version 0.008 of Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts - released November 10, 2013 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.009 of Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts - released January 28, 2014 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 

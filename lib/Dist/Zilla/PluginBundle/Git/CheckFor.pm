@@ -11,11 +11,8 @@ package Dist::Zilla::PluginBundle::Git::CheckFor;
 BEGIN {
   $Dist::Zilla::PluginBundle::Git::CheckFor::AUTHORITY = 'cpan:RSRCHBOY';
 }
-{
-  $Dist::Zilla::PluginBundle::Git::CheckFor::VERSION = '0.008';
-}
-# git description: 0.007-7-gc51a415
-
+# git description: 0.008-4-gd8798e0
+$Dist::Zilla::PluginBundle::Git::CheckFor::VERSION = '0.009';
 
 # ABSTRACT: All Git::CheckFor plugins at once
 
@@ -48,8 +45,9 @@ __END__
 
 =encoding UTF-8
 
-=for :stopwords Chris Weyl Karen Etheridge Mike Doherty Olivier Mengué <ether@cpan.org>
-<doherty@cs.dal.ca> <dolmen@cpan.org>
+=for :stopwords Chris Weyl Christian Walde Karen Etheridge Mike Doherty Olivier Mengué
+<walde.christian@googlemail.com> <ether@cpan.org> <doherty@cs.dal.ca>
+<dolmen@cpan.org>
 
 =head1 NAME
 
@@ -57,7 +55,7 @@ Dist::Zilla::PluginBundle::Git::CheckFor - All Git::CheckFor plugins at once
 
 =head1 VERSION
 
-This document describes version 0.008 of Dist::Zilla::PluginBundle::Git::CheckFor - released November 10, 2013 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.009 of Dist::Zilla::PluginBundle::Git::CheckFor - released January 28, 2014 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 
@@ -119,6 +117,10 @@ Chris Weyl <cweyl@alumni.drew.edu>
 =head1 CONTRIBUTORS
 
 =over 4
+
+=item *
+
+Christian Walde <walde.christian@googlemail.com>
 
 =item *
 

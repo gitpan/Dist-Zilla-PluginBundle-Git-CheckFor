@@ -11,10 +11,7 @@ package Dist::Zilla::Role::Git::Repo::More;
 BEGIN {
   $Dist::Zilla::Role::Git::Repo::More::AUTHORITY = 'cpan:RSRCHBOY';
 }
-{
-  $Dist::Zilla::Role::Git::Repo::More::VERSION = '0.008';
-}
-
+$Dist::Zilla::Role::Git::Repo::More::VERSION = '0.009';
 # ABSTRACT: A little more than Dist::Zilla::Role::Git::Repo
 
 use Moose::Role;
@@ -98,8 +95,9 @@ __END__
 
 =encoding UTF-8
 
-=for :stopwords Chris Weyl Karen Etheridge <ether@cpan.org> Mike Doherty
-<doherty@cs.dal.ca> Olivier Mengué <dolmen@cpan.org>
+=for :stopwords Chris Weyl Christian Walde <walde.christian@googlemail.com> Karen Etheridge
+<ether@cpan.org> Mike Doherty <doherty@cs.dal.ca> Olivier Mengué
+<dolmen@cpan.org>
 
 =head1 NAME
 
@@ -107,7 +105,7 @@ Dist::Zilla::Role::Git::Repo::More - A little more than Dist::Zilla::Role::Git::
 
 =head1 VERSION
 
-This document describes version 0.008 of Dist::Zilla::Role::Git::Repo::More - released November 10, 2013 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.009 of Dist::Zilla::Role::Git::Repo::More - released January 28, 2014 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 

@@ -15,25 +15,25 @@ not run its Makefile.PL or Build.PL.
 Hash: SHA1
 
 SHA1 55ac697642a18dd7d974736a3d06fd531aa82382 .travis.yml
-SHA1 5f9c47cd9691640b44003795ebe3e6c9c74838db Changes
+SHA1 7664eb09f8f68752fe648f55d802649e26fcf065 Changes
 SHA1 2957e60aa16b6ba65d5f51d08ced44f201239e4d INSTALL
 SHA1 05207cbc5971035849c1de2c7cb3babaeaccb6fb LICENSE
-SHA1 66ecb3710695f223ab52839a84c43c3bed1eb375 MANIFEST
-SHA1 6ce0bc460f78957d442ec57011b66fb5f2f11cc2 META.json
-SHA1 6e9ae054c594b72d5194a4e41e77f7baebbf0624 META.yml
-SHA1 8ddf448e6c8545c1b136ecaf138ec027d0e89bca Makefile.PL
-SHA1 877cb9b6fbde0ae9f4d3e0ea282e64c20202e03d README
-SHA1 6725904c116cb0b9574f4c226837a0bb38ead2a3 cpanfile
+SHA1 b8dba6ccd6be930353ddb129342b71ea80e48e0b MANIFEST
+SHA1 65735fb4c22df56c0fc566fbb4c8aabe4020b562 META.json
+SHA1 c3cdadb3678f79979e7972bfa1a986bd3c5757ca META.yml
+SHA1 7b8aa1cabf35e9f522c15e8242a71549239f3c0a Makefile.PL
+SHA1 422c03dd00e81ae910e2e5897908bc0722c72264 README
+SHA1 9f740f6a68355239b9707810e81c70bdef75aff3 cpanfile
 SHA1 87a7110fa1ac4618e89751817a31fa5db21f54eb dist.ini
-SHA1 082275a2309b52044f09cf3f050ebfeabe7989af lib/Dist/Zilla/Plugin/Git/CheckFor/CorrectBranch.pm
-SHA1 43abe0b200d27e12ac921cc02ee7b343d2f339a9 lib/Dist/Zilla/Plugin/Git/CheckFor/Fixups.pm
-SHA1 d2b9267b1cb60253b9366fbaa4f9cb0ed95c21bf lib/Dist/Zilla/Plugin/Git/CheckFor/MergeConflicts.pm
-SHA1 83f6b11a37a2df5f5b5a49f8b1b891c882bc5900 lib/Dist/Zilla/PluginBundle/Git/CheckFor.pm
-SHA1 b7b1be35e5598828f9dd8f9aa9494ae073e2184d lib/Dist/Zilla/Role/Git/Repo/More.pm
-SHA1 38f7e2fa39c5ae49b1e3835c93b540e4ca5f9ecb t/00-check-deps.t
-SHA1 ca310e25d8e2df84cc588d5a91417fb926a8dfdf t/00-compile.t
+SHA1 51a168fbfc0386fc27ffe9afc5e2ec058626857d lib/Dist/Zilla/Plugin/Git/CheckFor/CorrectBranch.pm
+SHA1 4eaae5fbaffadd5c933ac0cbd2b18a71321d1af6 lib/Dist/Zilla/Plugin/Git/CheckFor/Fixups.pm
+SHA1 5da215338c461e3ed549da76cfcbe55adc604cc4 lib/Dist/Zilla/Plugin/Git/CheckFor/MergeConflicts.pm
+SHA1 8a313a1b90ad84002da0de6d76c1eed50ddc547f lib/Dist/Zilla/PluginBundle/Git/CheckFor.pm
+SHA1 d85b09e8cea1328ca04933b380ed2eb9c50cf422 lib/Dist/Zilla/Role/Git/Repo/More.pm
+SHA1 c522c3928158e64bd97d34d20cbfe0b5305a7eb2 t/00-check-deps.t
+SHA1 c6108277fdc34cf10b2b09f019b3367407209fb3 t/00-compile.t
 SHA1 58205ee73b2ae3276056b6cde09183a984969ba3 t/000-report-versions-tiny.t
-SHA1 db2f22a9e7d896647d5538c82835864cabe8eba8 t/funcs.pm
+SHA1 c2f8a69f530510ebe437dd2cd9ccb3cf10ee623f t/funcs.pm
 SHA1 d6f0acf7c7e2e37c6389aba5b6afcda0832fdcf6 t/plugin/correct_branch.t
 SHA1 5ce4ec447e2ed1e1a4d70464b77a921a744e9728 t/plugin/fixups.t
 SHA1 9c3627ff37f4fd5bddc34bf46cf3359eaf76a060 t/release-consistent-version.t
@@ -41,20 +41,20 @@ SHA1 a032c41ef6887fab1b900669c2d304fab46680e2 t/release-eol.t
 SHA1 17984472e71941697844b0f677f6ddafb905b7fe t/release-has-version.t
 SHA1 69b02443079149ab2ffe1f5158aa0235996fd8eb t/release-minimum-version.t
 SHA1 3d1910efbb8d13bbbfd348132c7cfac7995fa82a t/release-no-smart-comments.t
-SHA1 b28e9a91db41883935cbeb8705dff277f55ac5d0 t/release-no-tabs.t
-SHA1 83452c07c8c1049e2e699765020dbafdddceb763 t/release-pod-coverage.t
+SHA1 9c624aa3f6343f1c25fc03c9e1055c05b1241740 t/release-no-tabs.t
+SHA1 843b3598dabaab6c7c564df7fd1ddb909e10b7b1 t/release-pod-coverage.t
 SHA1 8e56c5c444a12bb1373432026372d580799ff008 t/release-pod-linkcheck.t
-SHA1 f02390837e08f1f1b9b343fa21ed2aaae5885ea5 t/release-pod-syntax.t
+SHA1 22dedaac95db60277b75d21cdb3b49bf8b193d05 t/release-pod-syntax.t
 SHA1 c87c072b22826f7264146f89029b21a4e2f23931 t/requires_external.t
 SHA1 42ec11c1d87b612e85e2d631b3106de5d84ab653 t/role.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.11 (GNU/Linux)
+Version: GnuPG v1.4.14 (GNU/Linux)
 
-iQEcBAEBAgAGBQJSgH9bAAoJEOd5N1CvIgQkItIH/iWJ6xVA8MdYoZCE1LopUcaU
-75BTCfKdMDg8+ARNo2z+bdlOl/z7dioX3tYz82JsV/q+jqhUibxaP6Jmu/CbLyiu
-1RtAUX6x4aohdGbjaySc9kWNTRdpbY2ZGEAGK8saq0PDM8ALqyamRX7aQdvn3Gna
-US4hffQ8QAjpndyq4A7X6OLU/YgL27Rk4PcF4LAY9KsMVkZSzaH73S1k14VxwDVi
-4BvxZgFjU8z/Git7xR2i1nD9ibt68T87YLak04dwJ+9wvnPesvjWN4auhNw+tc46
-P6DDt6zyolQtq0Zwfa0wKiW0jiLe1E0ojmNnr/j6VmkgzQ39SlYAMhwpim47Sg8=
-=J0TN
+iQEcBAEBAgAGBQJS6EJjAAoJEOd5N1CvIgQkmScH/1731cvm3Gj6pEazuM7Bigv/
+05hSZxaVHiLvY72NmGK8dCrdt1YvLsYaoDe6NGkV8Ex3Pi3IpJiTBIuBW3iHXg4R
++sePgrPZfhAaYu8vfwgeYGHw+SntJzebAbxbQLzXSTSg6yLiP+ln1V8u/WgKtYo9
+C2I3dXTSfuLQNHiUUXNQrYKGEE0c01rgHzP1vdpSl0WYJ50xNYbGXnCvdtEKaQ9c
+de6LXEzibx+7CYVnqc/TDrq2HPTb42x9tDoeADyJGZAvx7twhwyvyw5bf1OmNgYs
+TLmdUSCvWSXroZzMgVNqSL/xjgReALWQ8FM16xOplGGheNFAUsSrVp5jTG2IFd4=
+=IGJL
 -----END PGP SIGNATURE-----
