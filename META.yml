@@ -33,19 +33,19 @@ no_index:
 provides:
   Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch:
     file: lib/Dist/Zilla/Plugin/Git/CheckFor/CorrectBranch.pm
-    version: '0.010'
+    version: '0.011'
   Dist::Zilla::Plugin::Git::CheckFor::Fixups:
     file: lib/Dist/Zilla/Plugin/Git/CheckFor/Fixups.pm
-    version: '0.010'
+    version: '0.011'
   Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts:
     file: lib/Dist/Zilla/Plugin/Git/CheckFor/MergeConflicts.pm
-    version: '0.010'
+    version: '0.011'
   Dist::Zilla::PluginBundle::Git::CheckFor:
     file: lib/Dist/Zilla/PluginBundle/Git/CheckFor.pm
-    version: '0.010'
+    version: '0.011'
   Dist::Zilla::Role::Git::Repo::More:
     file: lib/Dist/Zilla/Role/Git/Repo/More.pm
-    version: '0.010'
+    version: '0.011'
 requires:
   Dist::Zilla::Plugin::Git::NextVersion: '1.120370'
   Dist::Zilla::Role::BeforeRelease: '0'
@@ -69,7 +69,7 @@ resources:
   bugtracker: https://github.com/RsrchBoy/dist-zilla-pluginbundle-git-checkfor/issues
   homepage: http://metacpan.org/release/Dist-Zilla-PluginBundle-Git-CheckFor/
   repository: git://github.com/RsrchBoy/dist-zilla-pluginbundle-git-checkfor.git
-version: '0.010'
+version: '0.011'
 x_Dist_Zilla:
   perl:
     version: '5.018002'
