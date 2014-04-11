@@ -49,11 +49,11 @@ sub pmver {
 }
 
 eval { $v .= pmver('Capture::Tiny','any version') };
+eval { $v .= pmver('Devel::CheckBin','any version') };
 eval { $v .= pmver('Dist::Zilla::Plugin::Git::NextVersion','1.120370') };
 eval { $v .= pmver('Dist::Zilla::Role::BeforeRelease','any version') };
 eval { $v .= pmver('Dist::Zilla::Role::Git::Repo','any version') };
 eval { $v .= pmver('Dist::Zilla::Role::PluginBundle::Easy','any version') };
-eval { $v .= pmver('Env::Path','any version') };
 eval { $v .= pmver('ExtUtils::MakeMaker','6.30') };
 eval { $v .= pmver('File::Spec','any version') };
 eval { $v .= pmver('File::chdir','any version') };
@@ -73,7 +73,6 @@ eval { $v .= pmver('Test::DZil','any version') };
 eval { $v .= pmver('Test::Fatal','any version') };
 eval { $v .= pmver('Test::Moose::More','0.008') };
 eval { $v .= pmver('Test::More','0.94') };
-eval { $v .= pmver('Test::Most','any version') };
 eval { $v .= pmver('Test::TempDir','any version') };
 eval { $v .= pmver('Try::Tiny','any version') };
 eval { $v .= pmver('autodie','any version') };

@@ -3,8 +3,8 @@ NAME
     once
 
 VERSION
-    This document describes version 0.009 of
-    Dist::Zilla::PluginBundle::Git::CheckFor - released January 28, 2014 as
+    This document describes version 0.010 of
+    Dist::Zilla::PluginBundle::Git::CheckFor - released April 11, 2014 as
     part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 SYNOPSIS

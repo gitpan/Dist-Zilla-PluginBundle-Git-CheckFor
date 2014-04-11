@@ -11,7 +11,7 @@ package Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch;
 BEGIN {
   $Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch::AUTHORITY = 'cpan:RSRCHBOY';
 }
-$Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch::VERSION = '0.009';
+$Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch::VERSION = '0.010';
 # ABSTRACT: Check that you're on the correct branch before release
 
 use Moose;
@@ -78,7 +78,7 @@ Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch - Check that you're on the cor
 
 =head1 VERSION
 
-This document describes version 0.009 of Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch - released January 28, 2014 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
+This document describes version 0.010 of Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch - released April 11, 2014 as part of Dist-Zilla-PluginBundle-Git-CheckFor.
 
 =head1 SYNOPSIS
 
